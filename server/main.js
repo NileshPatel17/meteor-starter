@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { ContactsCollection } from '/imports/api/ContactsCollection';
+import "../imports/api/ContactsMethods";
+import "../imports/api/ContactsPublications";
 
 async function insertContact({ name, email, imageUrl }) {
   await ContactsCollection.insertAsync({ name, email, imageUrl, createdAt: new Date() });
